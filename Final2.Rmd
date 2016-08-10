@@ -3,12 +3,14 @@ Estimating the Number of Protestors in the San Francisco Anti-War Protest
 
 Introduction
 -------------------------
-In early 2001, many peaceful marches were held around the country in protest of the US involvement in Iraq. One of these protest took place in San Francisco, California. The *San Francisco Chronicle*'s estimated the total number of protestors by taking aerial shots of the protest from more than 2000 ft above. They estimated about 65,000 protesters at the time the photos were taken. The purpose of this analysis is to try to replicate their estimate. Using the same *San Francisco Chronicle*'s aerial photographs of the protest we verified their estimate was appropriate. Our estimate rounded to the nearest thousand was **60386.25** confirming *San Francisco Chronicle* estimate. Below you can find the methods used to construct our estimate along with a discussions on potential limitations of the data/findings.
+In early 2001, peaceful marches were held around the country protesting United States involvement in Iraq. One of these protest took place in San Francisco, California. The *San Francisco Chronicle*'s estimated the total number of protestors by taking aerial shots of the protest from more than 2000 ft above. They estimated about 65,000 protesters at the time the photos were taken. 
+
+The purpose of this analysis was to try to replicate their estimate. Using the same *San Francisco Chronicle*'s aerial photographs our estimate rounded to the nearest thousand was **60386** compared to *San Francisco Chronicle* estimate of 65,000. Below you can find the methods used to construct our estimate along with a discussions on potential limitations of the data/findings.
 
 Methodology
 -------------------------
 
-The first step to conduct our estimate was to piece together the six photos that were provided by the *San Francisco Chronicle* using a photo editor like *photoshop*. Since some of the photos included parts of other photos the six photos were manually combined into one unifying picture (Reference 1). This was done to avoid over counting. A grid was placed onto the unified photo, making sure the individual squares in the grid were not too large or too small. Each square was numbered if at least one person could be seen either walking or standing (Reference 2). We then used stratified sampling to find the estimated total number of protestors. In order to use stratified sampling we found/defined five things:   
+In order to conduct our estimate we first had to piece together the six photos that were provided by the *San Francisco Chronicle* using a photo editor like *photoshop*. Since some of the photos included parts of other photos the six photos were manually combined into one unifying picture (Reference 1). This was done to avoid over counting. A grid was placed onto the unified photo, making sure the individual squares in the grid were not too large or too small. Each square was numbered if at least one person could be seen either walking or standing (Reference 2). We then used stratified sampling to find the estimated total number of protestors. In order to use stratified sampling we found/defined five things:   
 
 1.) **Observation Unit**  
 The observation unit was defined to be any person that can be seen walking/standing in our photo. 
@@ -38,14 +40,17 @@ Visual estimates were used to place each grid into its appropriate stratum. A re
 Six percent of the grids of each stratum were selected after the grids were sorted. If a stratum was too small then at least two grids were sampled.  
 
 
-Finally averaging for each stratum then multiplying this by the amount of grids in that stratum gives the estimated number of protesters for each stratum. Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken. 
+Taking the average for each stratum then multiplying this by the amount of grids in that stratum gives the estimated number of protesters for each stratum. Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken. 
   
 Results
 -------------------------
 The total number of grids that were included (sampling units) was 582. The size of each stratum is given below. 
-```{r}
-DATA= read.csv(file="DATA.csv") #each column in DATA.cvs represents a different strata
-colSums(!is.na(DATA)) #The size of each stratum
+```{r echo=FALSE}
+DATA= read.csv(file="https://raw.githubusercontent.com/dvcv/Strat/master/DATA.csv") #each column in DATA.cvs represents a different strata
+size.str=colSums(!is.na(DATA))
+names(size.str)=1:5
+size.str #The size of each stratum
+
 ```
 
 Six percent of the grids for each stratum were sampled randomly using the *R* code found in *References* (Reference 3). Our random samples are given below. Each number in the a stratum represents a particular grid (Reference 2).
@@ -75,7 +80,7 @@ There was a total of 35 samples. If the  The average number of observation units
   * Stratum 5: 426 
 
 The estimatated number of protesters in each stratum is graphed below.
-```{r}
+```{r echo=FALSE}
 Nh=colSums(!is.na(DATA)) 
 pop.str=c(stratum.1=6.875*Nh[[1]],stratum.2=38.83*Nh[[2]],stratum.3=167*(Nh[[3]]),stratum.4=244.857*(Nh[[4]]),stratum.5=426*(Nh[[5]]))
 total.pop=sum(pop.str)
@@ -87,9 +92,9 @@ pl
 ```
 
   
-sAdding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken, which we estimated at **BLABLABLA**. 
-The variance of our estimate was **BLA**(Reference 5). 
-With a 95% confidence interval of **BLA**(Reference 6).
+Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken, which we estimated at **60386**. 
+The standard error of our estimate was **1751.78**(Reference 5). 
+With a 95% confidence interval of **(56952.76, 63819.75)**(Reference 6).
 
 Discussion
 -------------------------
@@ -98,35 +103,27 @@ A limitation of the data was the use of visual estimates to sort grids into thei
 
 Summary
 -------------------------
-Following the methods describe above the estimated number of protestors was estimated at **BLA**. With a 95% confidence interval of **BLA**. Our estimate confirms the *San Francisco Chronicle*'s estimate of 65,000. 
+Following the methods described above the estimated number of protestors was estimated at **60386** compared with the *San Francisco Chronicle*'s estimate of 65,000. With a 95% confidence interval of **(56952.76, 63819.75)**. 
 
 References
 -------------------------
 (1)   
 ```{r photo1.png, echo = F, results = 'asis'}
-#cat('\n![](photo1.png)\n')
+cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/photo1.png)\n')
 ```
 
 (2)  
 ```{r photo2.png, echo = F, results = 'asis'}
-#cat('\n![](photo2.png)\n')
+cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/photo2.png)\n')
 ```
 
 (3)
-```{r}
+```{r results='hide'}
 #random sample generator 
 sample.pa=round(colSums(!is.na(DATA))*(.06))
 w=sum(sample.pa)
-v=NA
 for(i in 1:5){
   x=sample(DATA[,i][!is.na(DATA[i])],sample.pa[[i]])
-   if(sample.pa[i]==0){
-       y=sample(DATA[,i][!is.na(DATA[i])],2)
-       x=y[!is.na(y)]   
-       w=w+2 
-       v=sample.pa
-       v[i]=2
-       }
   print(paste("Stratum",i))
   print(x)
 }
@@ -134,7 +131,7 @@ paste("Total Sampled ",w)
 ```
 
 (4)
-```{r}
+```{r results='hide'}
 #
 a.1=(c(11,4,5,7,2,0,3,18,16,0,0,11,0,12,17,4))
 b.1=(c(27,67,30,23,46,40))
@@ -149,21 +146,23 @@ mean(d.1)
 mean(e.1)
 ```
 (5)
-```{r}
-#y=list(a.1,b.1,c.1,d.1,e.1)
-#sum=0
-#for(i in 1:5){
+```{r results='hide'}
+y=list(a.1,b.1,c.1,d.1,e.1)
+sum=0
+for(i in 1:5){
 
-#  x=((1-(v[[i]]/(colSums(!is.na(DATA))[[i]])))*((colSums(!is.na(DATA))[[i]])^2)*((var(y[[i]]))/v[[i]]))
-#  sum=sum+x
+  x=((1-(length(y[[i]])/(colSums(!is.na(DATA))[[i]]))))*((colSums(!is.na(DATA))[[i]])^2)*((var(y[[i]]))/length(y[[i]]))
+  sum=sum+x
 
-#}
-#print(paste("The estimated variance of our stratified sample estimate is", sum, ""))
+}
+SE=sqrt(sum)
+print(paste("The estimated Standard Error of our stratified sample estimate is", SE, ""))
 ```
 (6)
-```{r}
-#lower.bound=332-1.96*sum
-#higher.bound=332+1.96*sum
-#confidence.interval=c(lower.bound,higher.bound)
-#confidence.interval
+```{r results='hide'}
+#Confidence Intervals
+lower.bound=pl[6]-1.96*SE
+higher.bound=pl[6]+1.96*SE
+confidence.interval=c(lower.bound,higher.bound)
+confidence.interval
 ```
