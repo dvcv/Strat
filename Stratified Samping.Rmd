@@ -6,7 +6,7 @@ Estimating the Number of Protestors in the San Francisco Anti-War Protest
 
 Introduction
 -------------------------
-In early 2001, many peaceful marches were held around the country in protest of the US involvement in Iraq. One of these protest took place in San Francisco, California. The *San Francisco Chronicle*'s estimated the total number of protestors by taking aerial shots of the protest from more than 2000 ft above. They estimated about 65,000 protesters at the time the photos were taken. The purpose of this analysis is to try to replicate their estimate. Using the same *San Francisco Chronicle*'s aerial photographs of the protest we verified their estimate was appropriate. Our estimate rounded to the nearest thousand was **BLABLA** confirming *San Francisco Chronicle* estimate. Below you can find the methods used to construct our estimate along with a discussions on potential limitations of the data/findings.
+In early 2001, many peaceful marches were held around the country in protest of the US involvement in Iraq. One of these protest took place in San Francisco, California. The *San Francisco Chronicle*'s estimated the total number of protestors by taking aerial shots of the protest from more than 2000 ft above. They estimated about 65,000 protesters at the time the photos were taken. The purpose of this analysis is to try to replicate their estimate. Using the same *San Francisco Chronicle*'s aerial photographs of the protest we verified their estimate was appropriate. Our estimate rounded to the nearest thousand was **60,000** confirming *San Francisco Chronicle* estimate. Below you can find the methods used to construct our estimate along with a discussions on potential limitations of the data/findings.
 
 Methodology
 -------------------------
@@ -32,13 +32,15 @@ Visual estimates were used to place each grid into its appropriate stratum. A re
 Six percent of the grids of each stratum were selected after the grids were sorted. If a stratum was too small then at least two grids were sampled.  
 
 -------------------------
+
 Finally averaging for each stratum then multiplying this by the amount of grids in that stratum gives the estimated number of protesters for each stratum. Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken. 
   
 Results
 -------------------------
+
 The total number of grids that were included (sampling units) was 582. The size of each stratum is given below. 
 ```{r}
-DATA= read.csv(file="/Users/Chavez/Documents/Strat/DATA.csv") #each column in DATA.cvs represents a different strata
+DATA= read.csv(file="https://raw.githubusercontent.com/dvcv/Strat/master/DATA.csv") #each column in DATA.cvs represents a different strata
 colSums(!is.na(DATA)) #The size of each stratum
 ```
 Six percent of the grids for each stratum were sampled randomly using the *R* code found in *References* (Reference 3). Our random samples are given below. Each number in the a stratum represents a particular grid (Reference 2).
@@ -83,12 +85,12 @@ References
 -------------------------
 (1)   
 ```{r photo1.png, echo = F, results = 'asis'}
-cat('\n![](photo1.png)\n')
+cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/photo2.png)\n')
 ```
 
 (2)  
 ```{r photo2.png, echo = F, results = 'asis'}
-cat('\n![](photo2.png)\n')
+cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/photo1.png)\n')
 ```
 
 (3)
