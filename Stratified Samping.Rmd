@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 Estimating the Number of Protestors in the San Francisco Anti-War Protest
 ========================================================
 
@@ -35,7 +38,7 @@ Results
 -------------------------
 The total number of grids that were included (sampling units) was 582. The size of each stratum is given below. 
 ```{r}
-DATA= read.csv(file="DATA.csv") #each column in DATA.cvs represents a different strata
+DATA= read.csv(file="/Users/Chavez/Documents/Strat/DATA.csv") #each column in DATA.cvs represents a different strata
 colSums(!is.na(DATA)) #The size of each stratum
 ```
 Six percent of the grids for each stratum were sampled randomly using the *R* code found in *References* (Reference 3). Our random samples are given below. Each number in the a stratum represents a particular grid (Reference 2).
