@@ -1,4 +1,5 @@
-# Strat
+# Aerial Pictures 
+
 http://www.stat.berkeley.edu/~nolan/CrowdCount/aerial-frame1.pdf   
 
 http://www.stat.berkeley.edu/~nolan/CrowdCount/aerial-frame2.pdf   
