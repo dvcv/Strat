@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 Estimating the Number of Protestors in the San Francisco Anti-War Protest
 ========================================================
 
@@ -44,7 +47,7 @@ Taking the average for each stratum then multiplying this by the amount of grids
   
 Results
 -------------------------
-The total number of grids that were included (sampling units) was 582. The size of each stratum is given below. 
+The total number of grids that were included (sampling units) was 582. The size of each stratum is given below.   
 ```{r echo=FALSE}
 DATA= read.csv(file="https://raw.githubusercontent.com/dvcv/Strat/master/DATA.csv") #each column in DATA.cvs represents a different strata
 size.str=colSums(!is.na(DATA))
@@ -52,7 +55,8 @@ names(size.str)=1:5
 size.str #The size of each stratum
 
 ```
-
+  
+  
 Six percent of the grids for each stratum were sampled randomly using the *R* code found in *References* (Reference 3). Our random samples are given below. Each number in the a stratum represents a particular grid (Reference 2).
 
 
@@ -79,7 +83,7 @@ There was a total of 35 samples. If the  The average number of observation units
   
   * Stratum 5: 426 
 
-The estimatated number of protesters in each stratum is graphed below.
+The estimatated number of protesters in each stratum is graphed below.  
 ```{r echo=FALSE}
 Nh=colSums(!is.na(DATA)) 
 pop.str=c(stratum.1=6.875*Nh[[1]],stratum.2=38.83*Nh[[2]],stratum.3=167*(Nh[[3]]),stratum.4=244.857*(Nh[[4]]),stratum.5=426*(Nh[[5]]))
