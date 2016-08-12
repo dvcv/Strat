@@ -50,7 +50,7 @@ Results
 The total number of grids that were included (sampling units) was 582. The size of each of the five stratum is given below.   
 ```{r echo=FALSE}
 #Reading data into DATA variable
-DATA= read.csv(file="https://raw.githubusercontent.com/dvcv/Strat/master/DATA.csv") 
+DATA= read.csv(file="https://raw.githubusercontent.com/dvcv/Strat/master/Data/DATA.csv") 
 #Nh holds the size of each stratum
 Nh=colSums(!is.na(DATA))
 #naming the stratums
@@ -122,13 +122,13 @@ References
 (1)   
 ```{r photo1.png, echo = F, results = 'asis'}
 #Photo1.png
-cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/Photo1.png)\n')
+cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/Photos/Photo1.png)\n')
 ```
 
 (2)  
 ```{r photo2.png, echo = F, results = 'asis'}
 #Photo2.png
-cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/Photo2.png)\n')
+cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/Photos/Photo2.png)\n')
 ```
 
 (3)
