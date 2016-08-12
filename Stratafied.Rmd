@@ -176,7 +176,8 @@ sum=0
 #Calculates the standard variance of the estimated total of observation units
 for(i in 1:5){
 
-  x=((1-(length(lStratums[[i]])/(Nh[[i]]))))*((Nh[[i]])^2)*((var(lStratums[[i]]))/length(lStratums[[i]]))
+  x=((1-(length(lStratums[[i]])/(Nh[[i]]))))*((Nh[[i]])^2)*((var(lStratums[[i]]))/
+  length(lStratums[[i]]))
   sum=sum+x
 
 }
