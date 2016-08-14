@@ -1,4 +1,0 @@
-# StratifiedSampling
-kfjdsaklfjdksljfldjs
-sdjflkdsjf 
-dlskjfadskjf
