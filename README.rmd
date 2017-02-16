@@ -126,10 +126,9 @@ References
 
 
 (2)  
-```{r photo2.png, echo = F, results = 'asis'}
-#Photo2.png
-cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/Photos/Photo2.png)\n')
-```
+
+![](Photos/Photo2.png?raw=true)
+
 
 (3)
 ```{r results='hide'}
