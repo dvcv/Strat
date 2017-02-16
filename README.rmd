@@ -120,10 +120,10 @@ Following the methods described above the estimated number of protestors was **6
 References
 -------------------------
 (1)   
-```{r photo1.png, echo = F, results = 'asis'}
+
 #Photo1.png
-cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/Photos/Photo1.png)\n')
-```
+![](Photos/Photo1.png?raw=true)
+
 
 (2)  
 ```{r photo2.png, echo = F, results = 'asis'}
