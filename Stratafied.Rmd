@@ -122,7 +122,7 @@ References
 (1)   
 ```{r photo1.png, echo = F, results = 'asis'}
 #Photo1.png
-cat('\n![](https://raw.githubusercontent.com/dvcv/Strat/master/Photos/Photo1.png)\n')
+'\n![](https://raw.githubusercontent.com/dvcv/Strat/master/Photos/Photo1.png)\n'
 ```
 
 (2)  
