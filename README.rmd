@@ -48,14 +48,14 @@ Taking the average for each stratum then multiplying this by the amount of grids
 Results
 -------------------------
 The total number of grids that were included (sampling units) was 582. The size of each of the five stratum is given below.   
-{r echo=T}
+```{r echo=T}
 #Reading data into DATA variable
 DATA= read.csv(file="https://raw.githubusercontent.com/dvcv/Strat/master/Data/DATA.csv") 
 #Nh holds the size of each stratum
 Nh=colSums(!is.na(DATA))
 #naming the stratums
 names(Nh)=c("Stratum 1","Stratum 2","Stratum 3","Stratum 4","Stratum 5")
-Nh 
+Nh``` 
 
   
 
