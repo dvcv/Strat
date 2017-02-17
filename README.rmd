@@ -45,11 +45,11 @@ Taking the average for each stratum then multiplying this by the amount of grids
 Results
 -------------------------
 The total number of grids that were included (sampling units) was 582. The size of each of the five stratum is given below.   
-**Stratum** 1 274   
-**Stratum** 2 102   
-**Stratum** 3 59  
-**Stratum** 4 99  
-**Stratum** 5 48        
+* Stratum 1: 274   
+* Stratum 2: 102   
+* Stratum 3: 59  
+* Stratum 4: 99  
+* Stratum 5: 48        
 
   
 
@@ -83,12 +83,12 @@ The estimatated number of protesters in each stratum is graphed below.
   
 ![](Photos/Photo3.png?raw=true)
   
-**Stratum** 1 1883.75  
-**Stratum** 2 3960.66  
-**Stratum** 3 9853.00  
-**Stratum** 4 24240.84  
-**Stratum** 5 20448.00        
-**Total**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60386.25  
+* Stratum 1: 1883.75  
+* Stratum 2: 3960.66  
+* Stratum 3: 9853.00  
+* Stratum 4: 24240.84  
+* Stratum 5: 20448.00        
+* Total: 60386.25  
     
 Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken, which we estimated at **60386**. 
 The standard error of our estimate was **1751.78**(Reference 5). 
