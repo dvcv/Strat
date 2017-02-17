@@ -5,7 +5,7 @@ Introduction
 -------------------------
 In early 2001, peaceful marches were held around the country protesting United States involvement in Iraq. One of these protest took place in San Francisco, California. The *San Francisco Chronicle*'s estimated the total number of protestors by taking aerial shots of the protest from more than 2000 ft above. They estimated about 65,000 protesters at the time the photos were taken. 
 
-The purpose of this analysis was to try to replicate their estimate. Using the same *San Francisco Chronicle*'s aerial photographs our estimate rounded to the nearest person was **60386** compared to *San Francisco Chronicle* estimate of 65,000. Below you can find the methods used to construct our estimate along with a discussions on potential limitations of the data/findings.
+The purpose of this analysis was to try to replicate their estimate. Using the same *San Francisco Chronicle*'s aerial photographs our estimate rounded to the nearest person was **60,386** compared to *San Francisco Chronicle* estimate of 65,000. Below you can find the methods used to construct our estimate along with a discussions on potential limitations of the data/findings.
 
 Methodology
 -------------------------
@@ -83,25 +83,26 @@ The estimatated number of protesters in each stratum is graphed below.
   
 ![](Photos/Photo3.png?raw=true)
   
-* Stratum 1: 1883.75  
-* Stratum 2: 3960.66  
-* Stratum 3: 9853.00  
-* Stratum 4: 24240.84  
-* Stratum 5: 20448.00        
-* Total: 60386.25  
+* Stratum 1: 1,883.75  
+* Stratum 2: 3,960.66  
+* Stratum 3: 9,853.00  
+* Stratum 4: 2,4240.84  
+* Stratum 5: 2,0448.00        
+* Total: 60,386.25  
     
-Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken, which we estimated at **60386**. 
-The standard error of our estimate was **1751.78**(Reference 5). 
-With a 95% confidence interval of **(56952.76, 63819.75)**(Reference 6).
+Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken, which we estimated at **60,386**. 
+The standard error of our estimate was **1,751.78**(Reference 5). 
+With a 95% confidence interval of **(56,952.76, 63,819.75)**(Reference 6).
 
 Discussion
 -------------------------
-Taking more samples from stratums that have higher variances and less samples from samples with lower variances would most likely give a better estimate, also increasing the total sample size can improve the accuracy of our estimate. However, these methods are time consuming and therefore not worth the small increase in accuracy.   
+Taking more samples from stratums that have higher variances and less samples from samples with lower variances would most likely give a better estimate, also increasing the total sample size can improve the accuracy of our estimate. However, these methods are time consuming and therefore not worth the small increase in accuracy. 
+  
 A limitation of the data was the use of visual estimates to sort grids into their stratums. The visual estimates were done by first deciding what sampling unit belonged to what stratum. For example, if sampling unit was almost entirely full with protesters then it was placed in the 76-100% stratum.
 
 Summary
 -------------------------
-Following the methods described above the estimated number of protestors was **60386** compared with the *San Francisco Chronicle*'s estimate of 65,000. With a 95% confidence interval of **(56952.76, 63819.75)**. 
+Following the methods described above the estimated number of protestors was **60,386** compared with the *San Francisco Chronicle*'s estimate of 65,000. With a 95% confidence interval of **(56,952.76, 63,819.75)**. 
 
 References
 -------------------------
