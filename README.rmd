@@ -86,8 +86,8 @@ The estimatated number of protesters in each stratum is graphed below.
 * Stratum 1: 1,883.75  
 * Stratum 2: 3,960.66  
 * Stratum 3: 9,853.00  
-* Stratum 4: 2,4240.84  
-* Stratum 5: 2,0448.00        
+* Stratum 4: 24,240.84  
+* Stratum 5: 20,448.00        
 * Total: 60,386.25  
     
 Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken, which we estimated at **60,386**. 
