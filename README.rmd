@@ -26,7 +26,7 @@ Since the density of the crowds varied over the route, the grids were seperated 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i.)Stratum 1: 10% or less of the sampling unit is filled with observation units.
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ii.) Stratum 2: 11%-25% of the sampling unit is filled with observation units.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ii.)Stratum 2: 11%-25% of the sampling unit is filled with observation units.
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iii.)Stratum 3: 26%-50% of the sampling unit is filled with observation units.
 
