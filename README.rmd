@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 Estimating the Number of Protestors in the San Francisco Anti-War Protest
 ========================================================
 
@@ -48,14 +45,8 @@ Taking the average for each stratum then multiplying this by the amount of grids
 Results
 -------------------------
 The total number of grids that were included (sampling units) was 582. The size of each of the five stratum is given below.   
-```{r echo=T}
-#Reading data into DATA variable
-DATA= read.csv(file="https://raw.githubusercontent.com/dvcv/Strat/master/Data/DATA.csv") 
-#Nh holds the size of each stratum
-Nh=colSums(!is.na(DATA))
-#naming the stratums
-names(Nh)=c("Stratum 1","Stratum 2","Stratum 3","Stratum 4","Stratum 5")
-Nh``` 
+## Stratum 1 Stratum 2 Stratum 3 Stratum 4 Stratum 5
+##       274       102        59        99        48
 
   
 
@@ -86,24 +77,12 @@ There was a total of 35 samples. If the  The average number of observation units
   * Stratum 5: 426 
 
 The estimatated number of protesters in each stratum is graphed below.  
-```{r echo=FALSE}
-#observationUnitPerStratum holds estimated number of observation units per stratum
-observationUnitPerStratum=c(stratum.1=6.875*Nh[[1]],stratum.2=38.83*Nh[[2]],stratum.3=167*(Nh[[3]]),stratum.4=244.857*(Nh[[4]]),stratum.5=426*(Nh[[5]]))
-
-#total.pop holds the estimated total population
-total.pop=sum(observationUnitPerStratum)
-
-#pl is concatenating observationUnitPerStratum and total.pop
-pl=c(observationUnitPerStratum,total.pop)
-#naming the 6 index of pl (or total.pop)
-names(pl)=c("Stratum 1","Stratum 2","Stratum 3","Stratum 4","Stratum 5", "Total")
-#barplot of estimates 
-barplot(pl,ylab="Estimated Protesters", names.arg = c("Stratum 1","Stratum 2","Stratum 3","Stratum 4","Stratum 5", "Total"), axisnames=TRUE, col = rainbow(6))
-
-pl
-```
-
   
+![](Photos/Photo1.png?raw=true)
+  
+## Stratum 1 Stratum 2 Stratum 3 Stratum 4 Stratum 5     Total
+##   1883.75   3960.66   9853.00  24240.84  20448.00  60386.25
+    
 Adding these estimates gives the overall estimated number of protestors in the San Francisco protest at the time the picture was taken, which we estimated at **60386**. 
 The standard error of our estimate was **1751.78**(Reference 5). 
 With a 95% confidence interval of **(56952.76, 63819.75)**(Reference 6).
@@ -121,7 +100,6 @@ References
 -------------------------
 (1)   
 
-#Photo1.png
 ![](Photos/Photo1.png?raw=true)
 
 
