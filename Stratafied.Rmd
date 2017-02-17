@@ -27,15 +27,15 @@ The population size was the total amount of sampling units, which was found to b
 4.) **Stratums**  
 Since the density of the crowds varied over the route, the grids were seperated into five stratums. The stratums were defined based on the density in each sampling unit. Sampling units were sorted into a single stratum based on the following conditioins:  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i.)Stratum 1: 10% or less of the sampling unit is filled with observation units.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stratum 1: 10% or less of the sampling unit is filled with observation units.
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ii.) Stratum 2: 11%-25% of the sampling unit is filled with observation units.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stratum 2: 11%-25% of the sampling unit is filled with observation units.
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iii.)Stratum 3: 26%-50% of the sampling unit is filled with observation units.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stratum 3: 26%-50% of the sampling unit is filled with observation units.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iv.)Stratum 4: 51%-75% of the sampling unit is filled with observation units.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stratum 4: 51%-75% of the sampling unit is filled with observation units.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; v.)Stratum 5: 75%-100% of the sampling unit is filled with observation units.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stratum 5: 75%-100% of the sampling unit is filled with observation units.   
 
 Visual estimates were used to place each grid into its appropriate stratum. A representative sample of grids for each density was selected. The totals for each group were examined to ensure there were not extreme deviations. This tested the original visual estimate that had assigned grids to density groups. If necessary, a sample grid's category was changed to reflect the count.  A *cvs* file named *DATA.csv* containing all this information was made.
 
@@ -110,14 +110,15 @@ With a 95% confidence interval of **(56952.76, 63819.75)**(Reference 6).
 
 Discussion
 -------------------------
-Taking more samples from stratums that have higher variances and less samples from samples with lower variances would most likely give a better estimate, also increasing the total sample size can improve the accuracy of our estimate. However, these methods are time consuming and therefore not worth the small increase in accuracy.   
+Taking more samples from stratums that have higher variances and less samples from samples with lower variances would most likely give a better estimate, also increasing the total sample size can improve the accuracy of our estimate. However, these methods are time consuming and therefore not worth the small increase in accuracy.  
+  
 A limitation of the data was the use of visual estimates to sort grids into their stratums. The visual estimates were done by first deciding what sampling unit belonged to what stratum. For example, if sampling unit was almost entirely full with protesters then it was placed in the 76-100% stratum.
 
 Summary
 -------------------------
 Following the methods described above the estimated number of protestors was **60386** compared with the *San Francisco Chronicle*'s estimate of 65,000. With a 95% confidence interval of **(56952.76, 63819.75)**. 
 
-References
+References and Code
 -------------------------
 (1)   
 ```{r photo1.png, echo = F, results = 'asis'}
